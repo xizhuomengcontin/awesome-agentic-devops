@@ -262,6 +262,26 @@ def test_catalog_schema_reference_includes_data_platform_operations_guidance():
     assert "<test-warehouse>" in text
 
 
+def test_catalog_schema_reference_includes_cost_quota_finops_guidance():
+    text = _schema_text()
+
+    assert "### Cost, quota, and FinOps impact guidance" in text
+    assert "Cost and FinOps agents" in text
+    assert "estimate spend" in text
+    assert "change budgets" in text
+    assert "read-only billing lookup" in text
+    assert "reservations, quotas" in text
+    assert "read-only cost explorer roles" in text
+    assert "explicit budget thresholds" in text
+    assert "cost reports, invoices" in text
+    assert "business-sensitive data" in text
+    assert "estimated savings" in text
+    assert "performance or availability tradeoffs" in text
+    assert "<sandbox-billing-export>" in text
+    assert "<test-budget>" in text
+    assert "<fixture-usage-report>" in text
+
+
 def test_catalog_schema_reference_includes_mlops_model_operation_guidance():
     text = _schema_text()
 

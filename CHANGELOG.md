@@ -9,6 +9,11 @@ documented here. The format is based on
 
 ### Added
 
+- **Cost, quota, and FinOps impact guidance.** Added schema-reference guidance
+  and regression coverage for reviewing cost and FinOps agents against billing
+  lookup, budget/quota/resource mutations, optimization tradeoffs, sensitive cost
+  exports, approval evidence, rollback, and public-safe synthetic billing
+  examples.
 - **Secrets and identity operations guidance.** Added schema-reference guidance
   and regression coverage for reviewing secrets-manager, identity-platform, and
   access-review agents against secret reveal/rotation/revocation, principal and

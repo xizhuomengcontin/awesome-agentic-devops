@@ -406,6 +406,29 @@ Score these rows by the most sensitive dataset or mutation path they can reach:
   `<sample-dataset>`, `<test-warehouse>`, and redacted query plans instead of real
   table names, customer identifiers, exported records, or private lineage graphs.
 
+### Cost, quota, and FinOps impact guidance
+
+Cost and FinOps agents may estimate spend, inspect invoices, change budgets,
+trigger optimization actions, or resize infrastructure. Score these rows by the
+highest-cost action or financial data surface they can reach:
+
+- Separate read-only billing lookup, forecast summaries, and recommendation
+  generation from actions that change budgets, reservations, quotas, instance
+  sizes, autoscaling policy, storage class, retention, or resource lifecycle.
+- Prefer sandbox billing exports, read-only cost explorer roles, limited accounts,
+  fixture usage data, and explicit budget thresholds before connecting production
+  cloud organizations, chargeback systems, or procurement workflows.
+- Check whether cost reports, invoices, tags, account names, project IDs, and usage
+  exports can reveal customer, revenue, contract, or business-sensitive data;
+  document masking, retention, and access boundaries in `risk_notes`.
+- Verify whether optimization actions capture actor identity, account or project
+  scope, resource IDs, estimated savings, performance or availability tradeoffs,
+  rollback plan, timestamp, and audit evidence before using `approval` or
+  `evidence` labels.
+- Keep examples public-safe: use `<sandbox-billing-export>`, `<test-budget>`,
+  `<fixture-usage-report>`, synthetic account names, and redacted cost figures
+  instead of real invoices, account IDs, customer names, or contract terms.
+
 ### MLOps model operation and evaluation guidance
 
 MLOps agents and MCP servers may inspect experiments, fine-tune models, deploy
