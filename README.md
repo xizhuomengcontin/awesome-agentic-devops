@@ -132,6 +132,7 @@ This repo keeps runnable reference agents under [`agents/`](agents/).
 The source of truth is [data/repos.yaml](data/repos.yaml). The catalog combines official vendor and open-source project resources with a dedicated section for community-driven tools and references. Entries include executable software as well as SDKs, documentation, security frameworks, registries, and other ecosystem resources.
 
 ### Official Cloud MCP Servers and Agent Toolkits
+- [Continuum-AI-Corp/OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) — ships an MCP server exposing the local trace library.
 
 | Repo | Labels | Operator note |
 | --- | --- | --- |
